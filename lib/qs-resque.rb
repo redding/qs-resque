@@ -1,5 +1,9 @@
-require "qs-resque/version"
+require 'qs'
+require 'qs-resque/version'
 
-module QsResque
-  # TODO: your code goes here...
+module Qs
+
+  module ResqueQueue
+  end
+
 end

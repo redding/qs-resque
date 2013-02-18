@@ -1,10 +1,31 @@
-# QsResque
+# Qs Resque
 
-TODO: Write a gem description
+Setup Resque message queues.  Run Resque workers for the queues.  Profit.
 
 ## Usage
 
-TODO: Write code samples and usage instructions here
+TODO: fill out code snippets with details
+
+Define a Resque queue:
+
+```ruby
+# in config/queues.rb
+
+class MyQueue
+  include Qs::ResqueQueue
+
+  name 'main'
+
+  job :do_something,  "MyJobs::DoSomething"
+
+end
+```
+
+When you run queue workers, they will be Resque workers.
+
+## Running Workers
+
+TODO: check out: https://github.com/nevans/resque-pool
 
 ## Installation
 

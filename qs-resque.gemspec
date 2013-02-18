@@ -5,12 +5,12 @@ require "qs-resque/version"
 
 Gem::Specification.new do |gem|
   gem.name        = "qs-resque"
-  gem.version     = QsResque::VERSION
-  gem.authors     = ["TODO: authors"]
-  gem.email       = ["TODO: emails"]
-  gem.description = %q{TODO: Write a gem description}
-  gem.summary     = %q{TODO: Write a gem summary}
-  gem.homepage    = "http://github.com/__/qs-resque"
+  gem.version     = Qs::Resque::VERSION
+  gem.authors     = ["Kelly Redding", "Collin Redding"]
+  gem.email       = ["kelly@kellyredding.com", "collin.redding@me.com"]
+  gem.description = %q{Define Qs message queues that use Resque}
+  gem.summary     = %q{Define Qs message queues that use Resque}
+  gem.homepage    = "http://github.com/kellyredding/qs-resque"
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
@@ -18,6 +18,6 @@ Gem::Specification.new do |gem|
   gem.require_paths = ["lib"]
 
   gem.add_development_dependency("assert")
-  # TODO: gem.add_dependency("gem-name", ["~> 0.0"])
+  gem.add_dependency("qs") # TODO: ~> 1.0
 
 end
